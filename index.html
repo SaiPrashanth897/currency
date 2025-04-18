@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🌍 GlobalXChange - Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle">
+    <label class="switch">
+      <input type="checkbox" id="modeSwitch" />
+      <span class="slider round"></span>
+    </label>
+    <span id="modeIcon">🌙</span>
+  </div>
+
+  <div class="container">
+    <h1>🌍 GlobalXChange</h1>
+    <p>Convert currencies instantly with live exchange rates powered by CurrencyAPI</p>
+
+    <div class="converter">
+      <input type="number" id="amount" placeholder="Enter amount" min="0" />
+
+      <div class="currency-selectors">
+        <select id="fromCurrency">
+          <option value="">From Currency</option>
+        </select>
+
+        <button id="swapBtn" title="Swap Currencies">🔁</button>
+
+        <select id="toCurrency">
+          <option value="">To Currency</option>
+        </select>
+      </div>
+
+      <button id="convertBtn">Convert</button>
+    </div>
+
+    <div id="result" class="result">
+      <!-- Converted result will appear here -->
+    </div>
+    <p>Powered By <a href="https://currencyapi.com" target="_blank">Currency API</a></p>
+    <p class="p">Done by <a href="https://www.linkedin.com/in/sai-prashanth-n-v-62b95b324/" target="_blank">LinkedIn</a></p>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

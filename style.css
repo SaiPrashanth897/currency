@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e0e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Container styling */
+  .container {
+    background-color: #1c1c1c;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Header */
+  .container h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .container p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Input and selects */
+  input[type="number"],
+  select {
+    width: 95%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Flex layout for currency selection */
+  .currency-selectors {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Currency dropdowns */
+  .currency-selectors select {
+    flex: 1;
+  }
+  
+  /* Swap button */
+  #swapBtn {
+    background-color: #3b3b3b;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #swapBtn:hover {
+    background-color: #5c5c5c;
+  }
+  
+  /* Convert Button */
+  #convertBtn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #635bff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #convertBtn:hover {
+    background-color: #4f45d3;
+  }
+  
+  /* Result section */
+  .result {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #72e06a;
+  }
+  
+  p .p {
+    margin-top: 0;
+    align-items: end;
+  }
+  
+  /* ===================== */
+  /* Dark Mode Toggle UI   */
+  /* ===================== */
+  .dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #555;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #ccc;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  
+  #modeIcon {
+    font-size: 1.5rem;
+  }
+  
+  /* ===================== */
+  /* Light Mode Overrides  */
+  /* ===================== */
+  body.light-mode {
+    background-color: #f3f3f3;
+    color: #1c1c1c;
+  }
+  
+  body.light-mode .container {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  body.light-mode input,
+  body.light-mode select {
+    background-color: #e0e0e0;
+    color: #000;
+    border: 1px solid #ccc;
+  }
+  
+  body.light-mode #convertBtn {
+    background-color: #4e4cf2;
+    color: white;
+  }
+  
+  body.light-mode #convertBtn:hover {
+    background-color: #3937d4;
+  }
+  
+  body.light-mode #swapBtn {
+    background-color: #d3d3d3;
+    color: black;
+  }
+  
+  body.light-mode .result {
+    color: #007a34;
+  }
